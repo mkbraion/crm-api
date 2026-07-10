@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  password  String // hash bcrypt
+  createdAt DateTime @default(now())
+  leads     Lead[]
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  nome      String
+  fone      String   @default("")
+  valor     Int      @default(0) // em reais inteiros
+  origem    String   @default("")
+  obs       String   @default("")
+  stage     Int      @default(0) // 0=Novo 1=Contato 2=Proposta 3=Ganho
+  lost      Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
