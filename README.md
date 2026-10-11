@@ -1,3 +1,19 @@
+<!-- MKBRAION-POLISH:START -->
+<div align="center">
+
+# CRM API
+
+**API REST para CRM construída com Node.js, Express, Prisma e PostgreSQL, com autenticação JWT, bcrypt e isolamento seguro de dados.**
+
+[![Repositório](https://img.shields.io/badge/GitHub-Repositório-181717?logo=github)](https://github.com/mkbraion/crm-api)
+
+</div>
+
+**Stack / tópicos:** ``api`` · ``backend`` · ``bcrypt`` · ``crm`` · ``express`` · ``javascript`` · ``jwt`` · ``nodejs`` · ``postgresql`` · ``prisma`` · ``rest-api`` · ``sales``
+
+> Projeto mantido por [@mkbraion](https://github.com/mkbraion).
+<!-- MKBRAION-POLISH:END -->
+
 # CRM API
 
 Backend leve que dá ao [CRM · Funil de Vendas](https://github.com/mkbraion/crm-funil-vendas) **contas e sincronização entre dispositivos**. Node + Express + Prisma + JWT.
